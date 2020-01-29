@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> Earthquake Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .range-slider {
+      width: 100%;
+      padding: 30px;
+    }
+
+    .range-slider .range-values {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      color: #888888;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 15px;
+    }
+
+    .rangeslider {
+      margin: 4px auto;
+      position: relative;
+    }
+
+    .rangeslider.rangeslider--horizontal {
+      height: 3px;
+      background-color: #e5e5e5;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .rangeslider.rangeslider--horizontal.rangeslider--active .rangeslider__handle {
+      background-color: #ffefb3;
+    }
+
+    .rangeslider .rangeslider__fill {
+      height: 3px;
+      background-color: #ffca00;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .rangeslider .rangeslider__handle {
+      width: 16px;
+      height: 16px;
+      border: 3px solid #ffca00;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: -7px;
+      box-shadow: 0 0 0 2px rgba(255, 202, 0, 0.2);
+    }
+
+    output {
+      display: block;
+      margin-bottom: 5px;
+      padding: 0;
+      text-align: center;
+      color: #080808;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+    }
+
+    output .output {
+      margin-right: 3px;
+      font-size: 14px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-md-12" id="header">
+      <h1><i>50 Years of Earthquakes</i></h1>
+      <hr>
+    </div>
+
+    <div class="col-md-12 long" id="map">
+    </div>
+
+    <div>
+      <input type="range" min="1965" max="2016" step="1" value="300" data-orientation="vertical"></input>
+      <output></output>
+    </div>
+
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-8">
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="range-slider">
+      <output class="range-output">Lånebeløb <span class="text-bold output"></span><span
+          class="text-bold">kr.</span></output>
+      <input type="range" min="2.000" max="300.000" step="3.000" value="50.000" />
+      <div class="range-values"><span class="range-min">2.000 kr.</span><span class="range-max">300.000 kr.</span></div>
+    </div>
+  </div>
+
+
+  <!-- Slider -->
+  <script src="./static/js/jquery.min.js"></script>
+  <script src="./static/js/rangeslider.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="static/js/data.js"></script> -->
+  <script src="static/js/app.js"></script>
+  <!-- API key -->
+  <script type="text/javascript" src="config.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="logic.js"></script>
+  <script type="text/javascript" src="./static/js/app.js"></script>
+</body>
+
+</html>

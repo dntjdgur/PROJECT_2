@@ -1,0 +1,68 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color:white;
+    /* background-image: url(/Users/williamharris/Documents/Data-Bootcamp_Course/Project2_Group2/Wills/static/images/seismograph2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%; */
+  }
+
+h1 {
+    color:red;
+}
+
+#header{
+
+    /* background-image: url(/Users/williamharris/Documents/Data-Bootcamp_Course/Project2_Group2/Wills/static/images/seismograph2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%; */
+    
+}
+
+div.long{
+    padding:300px;
+}
+
+
+
+
+.tooltip {
+    display: none;
+    position: absolute;
+    color:red;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    font: 12px sans-serif;
+    text-align: left;
+    outline: rgba(255, 255, 255, 0);
+   
+    opacity: 1;
+  }
+
+  .legend{
+      color:black;
+  }
+
+
+  .rect{
+      padding: 1px;
+      margin: 0px;
+      width: 35px;
+      font-style: italic;
+      text-align: center;
+      color:black;
+      
+  }
+
+  .strong{
+      background-color: rgba(255, 255, 255, 0.741);
+      padding: 1px;
+      margin: 0px;
+      width: 35px;
+      font-style: italic;
+      text-align: center;
+
+  }
